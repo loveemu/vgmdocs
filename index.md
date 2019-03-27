@@ -1,3 +1,3 @@
-# 418 I'm a teapot
+# Table of Contents
 
-Please try again later!
+[Conversion Tools for Video Game Music (Focuses on Sequenced Music → MIDI)](Conversion_Tools_for_Video_Game_Music.md)
