@@ -16,7 +16,7 @@ This article covers the methods for YM2612 (aka. OPN2, the FM synth chip of Gene
 
 [Kega Fusion](http://segaretro.org/Kega_Fusion), a good Genesis emulator, is able to log sound during the game play as [VGM file](https://en.wikipedia.org/wiki/VGM_(file_format)).
 
-![Kega Fusion Screenshot](Genesis_Guide_for_Extracting_FM_Synth_Presets_01.png)
+![Kega Fusion Screenshot](Guide_for_Extracting_FM_Synth_Presets_of_Sega_Genesis_01.png)
 
 If you want to read a detailed ripping guide, see [Project2612 ripping tutorial](https://vgmrips.net/wiki/Project2612_ripping_tutorial).
 
@@ -24,11 +24,11 @@ If you want to read a detailed ripping guide, see [Project2612 ripping tutorial]
 
 [vgm2pre](https://vgmrips.net/wiki/Vgm2pre) is a small tool for extracting instrument presets from VGM file.
 
-![VGM2Pre Screenshot](Genesis_Guide_for_Extracting_FM_Synth_Presets_02.png)
+![VGM2Pre Screenshot](Guide_for_Extracting_FM_Synth_Presets_of_Sega_Genesis_02.png)
 
 There are various formats for an instrument preset. Output file format can be chosen from Preferences window (Tools › Preferences).
 
-![VGM2Pre Preferences Screenshot](Genesis_Guide_for_Extracting_FM_Synth_Presets_03.png)
+![VGM2Pre Preferences Screenshot](Guide_for_Extracting_FM_Synth_Presets_of_Sega_Genesis_03.png)
 
 [TFI](https://vgmrips.net/wiki/TFI_File_Format) is prefered for [FMDrive from Aly James Lab](http://www.alyjameslab.com/alyjameslabfmdrive.html). Please choose the one that suits your goal.
 
@@ -38,7 +38,7 @@ By pressing Dump button, the output file will be saved. You can load the file by
 
 I prefer to use [foobar2000](http://www.foobar2000.org/) with [foo_input_vgm](https://vgmrips.net/forum/viewtopic.php?p=5638#p5638). You are able to mute certain channels from Preferences panel.
 
-![foo_input_vgm Chips Options Screenshot](Genesis_Guide_for_Extracting_FM_Synth_Presets_04.png)
+![foo_input_vgm Chips Options Screenshot](Guide_for_Extracting_FM_Synth_Presets_of_Sega_Genesis_04.png)
 
 If you want to try other ones, see [VGM Players \- vgmrips](https://vgmrips.net/wiki/VGM_Players).
 
@@ -46,11 +46,11 @@ If you want to try other ones, see [VGM Players \- vgmrips](https://vgmrips.net/
 
 [VGMPlayer](http://www.smspower.org/maxim/SMSSoftware/VGMPlayer) allows you to convert the VGM log into a music player ROM.
 
-![VGMPlayer Startup Window Screenshot](Genesis_Guide_for_Extracting_FM_Synth_Presets_05.png)
+![VGMPlayer Startup Window Screenshot](Guide_for_Extracting_FM_Synth_Presets_of_Sega_Genesis_05.png)
 
 Main window will appears by pressing the ROM Builder button.
 
-![VGMPlayer Main Window Screenshot](Genesis_Guide_for_Extracting_FM_Synth_Presets_06.png)
+![VGMPlayer Main Window Screenshot](Guide_for_Extracting_FM_Synth_Presets_of_Sega_Genesis_06.png)
 
 Add VGM files by the Add Tracks button first, then press Build Rom button, and a file named vgmPlay.bin will be saved. That is the converted ROM image.
 
@@ -60,7 +60,7 @@ Sometimes you might want to view register values in real-time. [Exodus](http://w
 
 Open a ROM and the YM2612 debugger (from the menu, Debug › Mega Drive › YM2612), then you will see register values there.
 
-![Exodus Screenshot](Genesis_Guide_for_Extracting_FM_Synth_Presets_07.png)
+![Exodus Screenshot](Guide_for_Extracting_FM_Synth_Presets_of_Sega_Genesis_07.png)
 
 ## Credits
 
