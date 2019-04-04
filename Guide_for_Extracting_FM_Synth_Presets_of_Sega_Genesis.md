@@ -10,8 +10,6 @@ This article covers the methods for YM2612 (aka. OPN2, the FM synth chip of Gene
 * Convert VGM file into Genesis ROM by [VGMPlayer](http://www.smspower.org/maxim/SMSSoftware/VGMPlayer)
 * View register values in real-time with [Exodus](http://www.exodusemulator.com/)
 
-<!-- more -->
-
 ## Dump VGM file by Kega Fusion
 
 [Kega Fusion](http://segaretro.org/Kega_Fusion), a good Genesis emulator, is able to log sound during the game play as [VGM file](https://en.wikipedia.org/wiki/VGM_(file_format)).
