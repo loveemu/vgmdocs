@@ -130,26 +130,26 @@ mem_set で演算の種類を指定し、adr と dat で演算の引数（0～25
 
 mem_set には次の値を指定可能です。比較演算の結果がどこに反映されるのかはよくわかりません。
 
-|値 |シンボル    |説明                    |疑似構文       |
-|---|------------|------------------------|---------------|
-|0  |mem_set     |代入（即値）            |`$adr = #dat`  |
-|1  |mem_add     |加算（即値）            |`$adr += #dat` |
-|2  |mem_sub     |減算（即値）            |`$adr -= #dat` |
-|3  |mem_mem_set |代入（間接）            |`$adr = $dat`  |
-|4  |mem_mem_add |加算（間接）            |`$adr += $dat` |
-|5  |mem_mem_sub |減算（間接）            |`$adr -= $dat` |
-|6  |mem_beq     |比較（即値） 等しい     |`$adr == #dat` |
-|7  |mem_bne     |比較（即値） 等しくない |`$adr != #dat` |
-|8  |mem_bhi     |比較（即値） 以上       |`$adr >= #dat` |
-|9  |mem_bhs     |比較（即値） より大きい |`$adr > #dat`  |
-|10 |mem_bls     |比較（即値） 以下       |`$adr <= #dat` |
-|11 |mem_blo     |比較（即値） より小さい |`$adr < #dat`  |
-|12 |mem_mem_beq |比較（間接） 等しい     |`$adr == $dat` |
-|13 |mem_mem_bne |比較（間接） 等しくない |`$adr != $dat` |
-|14 |mem_mem_bhi |比較（間接） 以上       |`$adr >= $dat` |
-|15 |mem_mem_bhs |比較（間接） より大きい |`$adr > $dat`  |
-|16 |mem_mem_bls |比較（間接） 以下       |`$adr <= $dat` |
-|17 |mem_mem_blo |比較（間接） より小さい |`$adr < $dat`  |
+|値 |シンボル    |説明                     |疑似構文         |
+|---|------------|-------------------------|-----------------|
+|0  |mem_set     |代入（即値）             |`$adr = #dat`    |
+|1  |mem_add     |加算（即値）             |`$adr += #dat`   |
+|2  |mem_sub     |減算（即値）             |`$adr -= #dat`   |
+|3  |mem_mem_set |代入（間接）             |`$adr = $dat`    |
+|4  |mem_mem_add |加算（間接）             |`$adr += $dat`   |
+|5  |mem_mem_sub |減算（間接）             |`$adr -= $dat`   |
+|6  |mem_beq     |比較?（即値） 等しい     |`$adr == #dat` ? |
+|7  |mem_bne     |比較?（即値） 等しくない |`$adr != #dat` ? |
+|8  |mem_bhi     |比較?（即値） 以上       |`$adr >= #dat` ? |
+|9  |mem_bhs     |比較?（即値） より大きい |`$adr > #dat` ?  |
+|10 |mem_bls     |比較?（即値） 以下       |`$adr <= #dat` ? |
+|11 |mem_blo     |比較?（即値） より小さい |`$adr < #dat` ?  |
+|12 |mem_mem_beq |比較?（間接） 等しい     |`$adr == $dat` ? |
+|13 |mem_mem_bne |比較?（間接） 等しくない |`$adr != $dat` ? |
+|14 |mem_mem_bhi |比較?（間接） 以上       |`$adr >= $dat` ? |
+|15 |mem_mem_bhs |比較?（間接） より大きい |`$adr > $dat` ?  |
+|16 |mem_mem_bls |比較?（間接） 以下       |`$adr <= $dat` ? |
+|17 |mem_mem_blo |比較?（間接） より小さい |`$adr < $dat` ?  |
 
 ## 既知の関数の一覧
 
