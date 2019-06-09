@@ -151,6 +151,35 @@ mem_set には次の値を指定可能です。比較演算の結果がどこに
 |16 |mem_mem_bls |比較（間接） 以下       |`$adr <= $dat` |
 |17 |mem_mem_blo |比較（間接） より小さい |`$adr < $dat`  |
 
+## 既知の関数の一覧
+
+```c
+void m4aSoundVSync(void); // -> SoundVSync_rev01
+void m4aSoundInit(void);
+void m4aSoundMode(u32 mode); // -> SoundMode_rev01
+void m4aSoundMain(void);
+void m4aSongNumStart(u16 n);
+void m4aMPlayStart(MusicPlayerArea *ma, SongHeader *so); // -> MPlayStart_rev01
+void m4aSongNumStartOrChange(u16 n);
+void m4aSongNumStartOrContinue(u16 n);
+void m4aSongNumStop(u16 n);
+void m4aMPlayStop(MusicPlayerArea *ma); // -> MPlayStop_rev01
+void m4aSongNumContinue(u16 n);
+void m4aMPlayAllStop(void);
+void m4aMPlayContinue(MusicPlayerArea *ma);
+void m4aMPlayAllContinue(void);
+void m4aMPlayFadeOut(MusicPlayerArea *ma, u16 sp);
+void m4aMPlayImmInit(MusicPlayerArea *ma);
+void m4aSoundVSyncOff(void); // -> SoundVSyncOff_rev01
+void m4aSoundVSyncOn(void); // -> SoundVSyncOn_rev01
+void m4aMPlayTempoControl(MusicPlayerArea *ma, u16 te); // -> MPlayTempoControl
+void m4aMPlayVolumeControl(MusicPlayerArea *ma, u16 tb, u16 vo); // -> MPlayVolumeControl
+void m4aMPlayPitchControl(MusicPlayerArea *ma, u16 tb, s16 pi); // -> MPlayPitchControl
+void m4aMPlayPanpotControl(MusicPlayerArea *ma, u16 tb, s8 pa); // -> MPlayPanpotControl
+void m4aMPlayModDepthSet(MusicPlayerArea *ma, u16 tb, u8 md); // -> MPlayModDepthSet
+void m4aMPlayLFOSpeedSet(MusicPlayerArea *ma, u16 tb, u8 ls); // -> MPlayLFOSpeedSet
+```
+
 ## ドキュメント
 
 [Romhacking.net - Documents - GBA "Sappy" sound engine information](https://www.romhacking.net/documents/462/) (by Bregalad, ipatix)
