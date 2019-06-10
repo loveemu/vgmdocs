@@ -8,6 +8,8 @@
 
 本記事では MP2k への深い説明はしませんが、MP2k の概要と詳細を知るための各種リソースを紹介します。
 
+[English version](Summary_of_GBA_Standard_Sound_Driver_MusicPlayer2000.md)
+
 ## MusicPlayer2000 の仕様
 
 ほとんどあらゆることは以下のドキュメントで説明されています。
@@ -39,7 +41,7 @@
 * メトロイドフュージョン、メトロイドゼロミッション
 * など
 
-## ドライバ関数の基本利用
+## MusicPlayer2000 ドライバ関数の基本利用
 
 基本的には 4 つの関数を使用して動作します。
 
@@ -71,7 +73,7 @@ void m4aSongNumStart(u16 n);
 
 [loveemu/saptapper: Automated GSF ripper](https://github.com/loveemu/saptapper)
 
-## シーケンスデータのコマンド一覧
+## MusicPlayer2000 シーケンスのコマンド一覧
 
 シーケンスデータのイベント一覧を下表に示します。
 
@@ -82,10 +84,10 @@ void m4aSongNumStart(u16 n);
 |0x00 ～ 0x7F |n/a        |n/a                                     |可       |コマンド自身を第一引数として、前回の繰り返し可能コマンドを繰り返す            |
 |0x80 ～ 0xB0 |W00 ～ W96 |void                                    |不可     |デルタタイム（Wait）                                                          |
 |0xB1         |FINE       |void                                    |不可     |トラック終了                                                                  |
-|0xB2         |GOTO       |u32 dest                                |不可     |指定先アドレス（絶対アドレス）にジャンプ                                      |
+|0xB2         |GOTO       |u32 dest                                |不可     |指定先アドレス（0x8XXXXXX のような絶対ハードウェアアドレス）にジャンプ        |
 |0xB3         |PATT       |u32 dest                                |不可     |パターン開始（サブルーチンジャンプ、ネスト不可）                              |
 |0xB4         |PEND       |void                                    |不可     |パターン終了                                                                  |
-|0xB5         |REPT       |u8 count, u32 dest                      |不可     |パターンを繰り返す（PATT に繰り返し回数 0～255 を追加）                       |
+|0xB5         |REPT       |u8 count, u32 dest                      |不可     |パターンを繰り返す（繰り返し回数 0～255）                                     |
 |0xB9         |MEMACC     |u8 mem_set, u8 adr, u8 dat [, u32 dest] |不可     |メモリアクセス（ダイナミックな条件付きジャンプに使用。詳細は後述）            |
 |0xBA         |PRIO       |u8                                      |不可     |トラックの優先度を設定（0～255、高い値ほど高優先度）                          |
 |0xBB         |TEMPO      |u8                                      |不可     |テンポ。BPM の半分の値を指定する（11～255, tempo 75 のとき 1 frame = 1 tick） |
@@ -108,7 +110,7 @@ void m4aSongNumStart(u16 n);
 
 ### ノート
 
-Wコマンド (0x80 ～ 0xB0)  と Nコマンド (0xD0 ～ 0xFF) は、以下のテーブルに基づいて 1～96 までの長さを表現します。
+Wxx コマンド (0x80 ～ 0xB0)  と Nxx コマンド (0xD0 ～ 0xFF) は、以下のテーブルに基づいて 1～96 までの長さを表現します。
 
 ```c
 const u8 noteLengthTable[48] = {
@@ -120,7 +122,7 @@ const u8 noteLengthTable[48] = {
 
 ### メモリアクセス (MEMACC)
 
-MEMACC (0xB9) は共有のメモリアクセス領域（最大 256 バイトの RAM 領域 `m4a_memacc_area`）を使用し、ゲームの状態に応じて動作をダイナミックに変更するためのコマンドです。ほとんど使用されていません。
+MEMACC (0xB9) は共有のメモリ領域（最大 256 バイトの RAM 領域 `m4a_memacc_area`）を使用し、ゲームの状態に応じて動作に条件付きジャンプを実行するためのコマンドです。ほとんど使用されていません。
 
 このコマンドは基本的に3つの引数を取りますが、条件分岐命令では4つめの引数に分岐先アドレスを指定します。
 
@@ -132,7 +134,7 @@ MEMACC, mem_set, adr, dat
 MEMACC, mem_set, adr, dat, dest
 ```
 
-mem_set で演算の種類を指定し、adr と dat で演算の引数（0～255）を指定します。adr は 0～255 の値を指定可能です。
+mem_set で演算の種類を指定し、adr と dat で演算の引数（0～255）を指定します。
 
 mem_set には次の値を指定可能です。
 
@@ -146,14 +148,14 @@ mem_set には次の値を指定可能です。
 |5  |mem_mem_sub |減算（間接）                |`$adr -= $dat`                |
 |6  |mem_beq     |条件分岐（即値） 等しい     |`if ($adr == #dat) goto dest` |
 |7  |mem_bne     |条件分岐（即値） 等しくない |`if ($adr != #dat) goto dest` |
-|8  |mem_bhi     |条件分岐（即値） 以上       |`if ($adr >= #dat) goto dest` |
-|9  |mem_bhs     |条件分岐（即値） より大きい |`if ($adr > #dat) goto dest`  |
+|8  |mem_bhi     |条件分岐（即値） より大きい |`if ($adr > #dat) goto dest` |
+|9  |mem_bhs     |条件分岐（即値） 以上       |`if ($adr >= #dat) goto dest`  |
 |10 |mem_bls     |条件分岐（即値） 以下       |`if ($adr <= #dat) goto dest` |
 |11 |mem_blo     |条件分岐（即値） より小さい |`if ($adr < #dat) goto dest`  |
 |12 |mem_mem_beq |条件分岐（間接） 等しい     |`if ($adr == $dat) goto dest` |
 |13 |mem_mem_bne |条件分岐（間接） 等しくない |`if ($adr != $dat) goto dest` |
-|14 |mem_mem_bhi |条件分岐（間接） 以上       |`if ($adr >= $dat) goto dest` |
-|15 |mem_mem_bhs |条件分岐（間接） より大きい |`if ($adr > $dat) goto dest`  |
+|14 |mem_mem_bhi |条件分岐（間接） より大きい |`if ($adr > $dat) goto dest` |
+|15 |mem_mem_bhs |条件分岐（間接） 以上       |`if ($adr >= $dat) goto dest`  |
 |16 |mem_mem_bls |条件分岐（間接） 以下       |`if ($adr <= $dat) goto dest` |
 |17 |mem_mem_blo |条件分岐（間接） より小さい |`if ($adr < $dat) goto dest`  |
 
@@ -194,8 +196,8 @@ void m4aMPlayLFOSpeedSet(MusicPlayerArea *ma, u16 tb, u8 ls);
 
 * [ipatix/agbplay: Music player for the most common GBA sound format](https://github.com/ipatix/agbplay)
   * MP2k フォーマットを再生可能な PC 向けミュージックプレイヤー（LGPLv3）
-  * ソースコードがドライバを理解するうえで参考になる（シーケンスデータ周りは StreamGenerator.cpp 参照）
-  * ipatix 氏は著名な MP2k の解析者の一人で、同氏の github には m4a2s, midi2agb, wav2agb など、他の MP2k のリバース用ツールもある（ハックロム開発などに便利）
+  * ソースコードがドライバを理解するうえで参考になります（シーケンスデータ周りは StreamGenerator.cpp 参照）
+  * ipatix 氏は著名な MP2k の解析者の一人で、同氏の github には m4a2s, midi2agb, wav2agb など、他の MP2k 用ツールもあります（ハックロム開発などに便利）
 * [Kermalis/VGMusicStudio: A program that lets you listen to the music from popular video game formats.](https://github.com/Kermalis/VGMusicStudio)
   * agbplay より後発の類似ツール、C# 製（LGPLv3）
 * [loveemu/saptapper: Automated GSF ripper](https://github.com/loveemu/saptapper) (A reimplementation of Caitsith2's saptapper)
