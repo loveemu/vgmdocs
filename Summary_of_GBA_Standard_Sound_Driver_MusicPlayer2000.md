@@ -10,7 +10,7 @@ This article does not explain the details of MP2k. Instead, this article introdu
 
 [日本語で読む](Summary_of_GBA_Standard_Sound_Driver_MusicPlayer2000.ja-JP.md)
 
-## MusicPlayer2000 Specifications
+## MusicPlayer2000 Specifications Overview
 
 Almost everything is explained in the following document:
 

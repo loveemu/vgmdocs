@@ -10,7 +10,7 @@
 
 [English version](Summary_of_GBA_Standard_Sound_Driver_MusicPlayer2000.md)
 
-## MusicPlayer2000 の仕様
+## MusicPlayer2000 の仕様概要
 
 ほとんどあらゆることは以下のドキュメントで説明されています。
 
