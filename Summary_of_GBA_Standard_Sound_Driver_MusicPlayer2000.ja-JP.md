@@ -198,7 +198,7 @@ void m4aMPlayLFOSpeedSet(MusicPlayerArea *ma, u16 tb, u8 ls);
   * ipatix 氏は著名な MP2k の解析者の一人で、同氏の github には m4a2s, midi2agb, wav2agb など、他の MP2k のリバース用ツールもある（ハックロム開発向け）
 * [Kermalis/VGMusicStudio: A program that lets you listen to the music from popular video game formats.](https://github.com/Kermalis/VGMusicStudio)
   * agbplay より後発の類似ツール、C# 製（LGPLv3）
-* [loveemu/saptapper: Automated GSF ripper](https://github.com/loveemu/saptapper) (A fork of Caitsith2's saptapper)
+* [loveemu/saptapper: Automated GSF ripper](https://github.com/loveemu/saptapper) (A reimplementation of Caitsith2's saptapper)
   * MP2k 向けの全自動の GSF リッピングツール
   * m4a の基本的な関数を検出する用途にも使える
   * フォーク元: [GSF Ripping Tools - caitsith2.net](http://gsf.caitsith2.net/ripping.html)
