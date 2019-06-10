@@ -31,7 +31,7 @@ To summarize the main explanation MP2k has the following features.
 * Data format
   * Convert MIDI / AIFF file to assembly (*.s) and build GBA ROM
   * Sequences are multitrack format like SMF Format 1 (PPQN is 24)
-  * Samples are represented as uncompressed 8-bit PCM (note that they have the opposite sign to Microsoft Wave)
+  * Samples are uncompressed 8-bit PCM (note that they have the opposite sign to Microsoft Wave)
   * There is no distinction between BGM and SFX. All sounds consist of sequence + bank combinations
 
 Some games use compatible drivers that improve and extend MP2k.
