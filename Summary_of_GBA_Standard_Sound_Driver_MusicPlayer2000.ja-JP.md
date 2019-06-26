@@ -88,6 +88,8 @@ void m4aSongNumStart(u16 n);
 
 [loveemu/saptapper: Automated GSF ripper](https://github.com/loveemu/saptapper)
 
+内部的には、これらの関数を通じて曲を再生すると、サウンドドライバは再生に関する情報を Music Player のインスタンスに保存します。通常、複数の音楽プレイヤーのインスタンスが存在し、ひとつはBGM用、他方は効果音用といった使い分けがなされます。曲をどの Music Player のインスタンスで再生するかは、その曲のヘッダーによって決まります。
+
 ## ROM / RAM データマップ
 
 ![MusicPlayer2000 ROM/RAM Data Map](images/m4a_data_diagram.png)

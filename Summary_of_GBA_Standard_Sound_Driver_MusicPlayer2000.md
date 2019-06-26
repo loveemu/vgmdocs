@@ -88,6 +88,8 @@ The addresses of these functions can usually be detected with saptapper, an auto
 
 [loveemu/saptapper: Automated GSF ripper](https://github.com/loveemu/saptapper)
 
+Internally, when a song starts playing through these functions, the sound driver stores information about the playback, into an instance of music player. Usually, a game has more than one music player instances on memory. One is used for music and the other ones are used for SFXs and such, typically. The instance of the music player to play a song is determined by its song header.
+
 ## ROM / RAM data map
 
 ![MusicPlayer2000 ROM/RAM Data Map](images/m4a_data_diagram.png)
