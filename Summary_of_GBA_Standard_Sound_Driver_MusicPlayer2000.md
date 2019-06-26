@@ -73,6 +73,12 @@ The addresses of these functions can usually be detected with saptapper, an auto
 
 [loveemu/saptapper: Automated GSF ripper](https://github.com/loveemu/saptapper)
 
+## ROM / RAM data map
+
+![MusicPlayer2000 ROM/RAM Data Map](images/m4a_data_diagram.png)
+
+See [m4a_internal.h](https://github.com/pret/pokeruby/blob/master/include/gba/m4a_internal.h) and [sappy.txt](https://www.romhacking.net/documents/462/) for more informations.
+
 ## List of commands of MusicPlayer2000 sequence
 
 The table below shows a list of MP2k sequence commands.

@@ -73,6 +73,12 @@ void m4aSongNumStart(u16 n);
 
 [loveemu/saptapper: Automated GSF ripper](https://github.com/loveemu/saptapper)
 
+## ROM / RAM データマップ
+
+![MusicPlayer2000 ROM/RAM Data Map](images/m4a_data_diagram.png)
+
+さらなる詳細については、[m4a_internal.h](https://github.com/pret/pokeruby/blob/master/include/gba/m4a_internal.h) や [sappy.txt](https://www.romhacking.net/documents/462/) をご覧ください。
+
 ## MusicPlayer2000 シーケンスのコマンド一覧
 
 シーケンスデータのイベント一覧を下表に示します。
