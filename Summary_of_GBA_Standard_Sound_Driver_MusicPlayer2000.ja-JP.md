@@ -210,3 +210,4 @@ void m4aMPlayLFOSpeedSet(MusicPlayerArea *ma, u16 tb, u8 ls);
   * フォーク元: [Utilities - GBA Mus Riper - Romhacking.net](https://www.romhacking.net/utilities/881/)
 * [pret/pokeruby: Disassembly of Pokémon Ruby/Sapphire](https://github.com/pret/pokeruby)
   * 音楽データの参考例
+  * [m4a_internal.h](https://github.com/pret/pokeruby/blob/master/include/gba/m4a_internal.h) は MP2k の内部データ構造をよく表しています
