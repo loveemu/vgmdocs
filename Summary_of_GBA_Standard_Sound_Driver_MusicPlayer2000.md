@@ -232,3 +232,4 @@ void m4aMPlayLFOSpeedSet(MusicPlayerArea *ma, u16 tb, u8 ls);
 * [pret/pokeruby: Disassembly of Pokémon Ruby/Sapphire](https://github.com/pret/pokeruby)
   * Actual example of music data
   * [m4a_internal.h](https://github.com/pret/pokeruby/blob/master/include/gba/m4a_internal.h) is a good representation of the internal data structure of MP2k
+* [IDA FLIRT Signatures for GBA](https://1drv.ms/u/s!Alr6ACx5YY7_gjYggbVU-MQwJIlj?e=xR1rZD) (experimental)
