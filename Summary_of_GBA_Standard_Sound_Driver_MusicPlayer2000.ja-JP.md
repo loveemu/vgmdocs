@@ -34,7 +34,22 @@
   * サンプルデータは無圧縮の符号つき 8-bit PCM（Microsoft Wave とは符号が逆なので注意）
   * BGM と SFX の区別はない。すべてのサウンドはシーケンス＋バンクの組み合わせで構成される
 
-いくつかのゲームでは MP2k を改善・拡張した互換ドライバが使用されています。
+じつは、この標準サウンドドライバはシステムROM（BIOS）にも実装されています。ただし、MP2k ドライバがバグ修正や改良を加えた互換ドライバとしてリリースされた都合上、それらのシステム関数は実際の商用ゲームでは基本的に一切使用されていません。GBA の BIOS 関数については、[GBATEK](https://problemkaputt.de/gbatek.htm) を参照してください。
+
+## バージョン＆バリエーション
+
+知る限りでは、MP2k には次の標準的なバリエーションが存在します:
+
+|説明              |使用ゲーム例                                                    |
+|------------------|----------------------------------------------------------------|
+|古いバージョン    |桃太郎まつり（おそらくほかにも2001年発売のいくつかのゲーム）    |
+|ステレオ版        |悪魔城ドラキュラ: Circle of the Moon                            |
+|モノラル版        |キャッスルヴァニア: 白夜の協奏曲＆暁月の円舞曲                  |
+|新しいバージョン? |ロックマンEXE5, ぷよぷよフィーバー, マザー3                     |
+
+注: ここでは、マイナーバージョンの小さな相違点は同一と見なします。
+
+また、いくつかのゲームでは MP2k を改善・拡張した互換ドライバが使用されています。
 
 * ポケットモンスターシリーズ（圧縮サンプルを扱える）
 * 黄金の太陽など、株式会社キャメロットによって開発されたタイトル
@@ -77,7 +92,7 @@ void m4aSongNumStart(u16 n);
 
 ![MusicPlayer2000 ROM/RAM Data Map](images/m4a_data_diagram.png)
 
-さらなる詳細については、[m4a_internal.h](https://github.com/pret/pokeruby/blob/master/include/gba/m4a_internal.h) や [sappy.txt](https://www.romhacking.net/documents/462/) をご覧ください。
+さらなる詳細については、[m4a_internal.h](https://github.com/pret/pokeruby/blob/master/include/gba/m4a_internal.h) や [sappy.txt](https://www.romhacking.net/documents/462/) を参照してください。
 
 ## MusicPlayer2000 シーケンスのコマンド一覧
 

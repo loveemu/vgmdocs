@@ -34,7 +34,22 @@ To summarize the main explanation MP2k has the following features.
   * Samples are uncompressed 8-bit PCM (note that they have the opposite sign to Microsoft Wave)
   * There is no distinction between BGM and SFX. All sounds consist of sequence + bank combinations
 
-Some games use compatible drivers that improve and extend MP2k.
+In fact, this standard sound driver is also implemented in the System ROM (BIOS). However, those system functions are almost never used in actual commercial games, because the MP2k driver has been released as a compatible driver with bugfixes and improvements. See [GBATEK](https://problemkaputt.de/gbatek.htm) for GBA BIOS functions.
+
+## Versions and variations
+
+As far as I know, MP2k has the following standard variations:
+
+|Description    |Example of games using the driver                                  |
+|---------------|-------------------------------------------------------------------|
+|Older version  |Momotarou Matsuri (and probably some other games released in 2001) |
+|Stereo version |Castlevania: Circle of the Moon                                    |
+|Mono version   |Castlevania: Harmony of Dissonance and Aria of Sorrow              |
+|Newer version? |Mega Man Battle Network 5, Puyo Pop Fever, Mother 3                |
+
+Note: Minor version differences are considered identical here.
+
+Also, some games use compatible drivers that improve and extend MP2k.
 
 * Pokemon Series (uses compressed samples)
 * Games developed by Camelot, Inc., such as the Golden Sun
