@@ -40,12 +40,12 @@ In fact, this standard sound driver is also implemented in the System ROM (BIOS)
 
 As far as I know, MP2k has the following standard variations:
 
-|Description    |Example of games using the driver                                  |
-|---------------|-------------------------------------------------------------------|
-|Older version  |Momotarou Matsuri (and probably some other games released in 2001) |
-|Stereo version |Castlevania: Circle of the Moon                                    |
-|Mono version   |Castlevania: Harmony of Dissonance and Aria of Sorrow              |
-|Newer version? |Mega Man Battle Network 5, Puyo Pop Fever, Mother 3                |
+|Description                      |Example of games using the driver                     |
+|---------------------------------|------------------------------------------------------|
+|Older version (very rarely used) |Momotarou Matsuri, Boku wa Koukuu Kanseikan           |
+|Stereo version                   |Castlevania: Circle of the Moon                       |
+|Mono version                     |Castlevania: Harmony of Dissonance and Aria of Sorrow |
+|Newer version?                   |Mega Man Battle Network 5, Puyo Pop Fever, Mother 3   |
 
 Note: Minor version differences are considered identical here.
 
