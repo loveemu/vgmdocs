@@ -1,7 +1,7 @@
 # GBA 標準サウンドドライバ（MusicPlayer2000）の概要
 
 任天堂のゲームボーイアドバンスのSDKには、ゲームで音楽や効果音を鳴らすためのサウンドドライバライブラリが添付されています。
-このドライバは公式には MusicPlayer2000 あるいは m4a と称されており、しばしば非公式に Sappy という名前でも呼ばれます。（以降は MP2k と称します）
+このドライバは公式には AGB MusicPlayer2000 あるいは m4a と称されており、しばしば非公式に Sappy という名前でも呼ばれます。（以降は MP2k と称します）
 
 必然的に、MP2k は（とくに日本国内でリリースされた）非常に多くのゲームで使用されています。
 また、古くから多くの人々によって解析されてきたため、とても多くの解析情報やツールが存在します。
@@ -34,7 +34,7 @@
   * サンプルデータは無圧縮の符号つき 8-bit PCM（Microsoft Wave とは符号が逆なので注意）
   * BGM と SFX の区別はない。すべてのサウンドはシーケンス＋バンクの組み合わせで構成される
 
-じつは、この標準サウンドドライバはシステムROM（BIOS）にも実装されています。ただし、MP2k ドライバがバグ修正や改良を加えた互換ドライバとしてリリースされた都合上、それらのシステム関数は実際の商用ゲームでは基本的に一切使用されていません。GBA の BIOS 関数については、[GBATEK](https://problemkaputt.de/gbatek.htm) を参照してください。
+じつは、この標準サウンドドライバはシステムROM（BIOS）にも実装されています。ただし、MP2k ドライバがバグ修正や改良を加えた互換ドライバとしてリリースされた都合上、それらのシステム関数は実際の商用ゲームでは基本的に使用されていません。GBA の BIOS 関数については、[GBATEK](https://problemkaputt.de/gbatek.htm) を参照してください。
 
 ## バージョン＆バリエーション
 
@@ -223,15 +223,18 @@ void m4aMPlayLFOSpeedSet(MusicPlayerArea *ma, u16 tb, u8 ls);
   * ipatix 氏は著名な MP2k の解析者の一人で、同氏の github には m4a2s, midi2agb, wav2agb など、他の MP2k 用ツールもあります（ハックロム開発などに便利）
 * [Kermalis/VGMusicStudio: A program that lets you listen to the music from popular video game formats.](https://github.com/Kermalis/VGMusicStudio)
   * agbplay より後発の類似ツール、C# 製（LGPLv3）
+* [ipatix/gba-hq-mixer: HQ mixer for GBA games which use the m4a/mp2k sound driver](https://github.com/ipatix/gba-hq-mixer)
+  * 再配置可能なコードの追加で高品質なミキシングを実現します
 * [loveemu/saptapper: Automated GSF ripper](https://github.com/loveemu/saptapper) (A reimplementation of Caitsith2's saptapper)
   * MP2k 向けの全自動の GSF リッピングツール
   * m4a の基本的な関数を検出する用途にも使える
   * フォーク元: [GSF Ripping Tools - caitsith2.net](http://gsf.caitsith2.net/ripping.html)
 * [jpmac26/gba-mus-ripper: A fork of Bregalad's "GBA Mus Riper" program](https://github.com/jpmac26/gba-mus-ripper)
   * MP2k フォーマットを MIDI/SF2 形式でエクスポートできるツール
-  * sappy_detector.exe は MP2k の検出と基本情報の確認に使える
+  * sappy_detector.exe は MP2k の検出と基本情報の確認に使えます
   * フォーク元: [Utilities - GBA Mus Riper - Romhacking.net](https://www.romhacking.net/utilities/881/)
 * [pret/pokeruby: Disassembly of Pokémon Ruby/Sapphire](https://github.com/pret/pokeruby)
   * 音楽データの参考例
   * [m4a_internal.h](https://github.com/pret/pokeruby/blob/master/include/gba/m4a_internal.h) は MP2k の内部データ構造をよく表しています
+  * 前述の通り、ポケモンのサウンドドライバーはすこしカスタマイズされていますが、その違いはわずかです
 * [IDA FLIRT Signatures for GBA](https://1drv.ms/u/s!Alr6ACx5YY7_gjYggbVU-MQwJIlj?e=xR1rZD) (experimental)

@@ -1,7 +1,7 @@
 # Summary of GBA standard sound driver (MusicPlayer2000)
 
 Nintendo's Game Boy Advance SDK comes with a sound driver library for playing music and sound effects in the game.
-This driver is officially called MusicPlayer2000 or m4a and is often informally also called Sappy.
+This driver is officially called AGB MusicPlayer2000 or m4a and is often informally also called Sappy.
 
 Inevitably, MP2k is used in a large number of games (especially in games released in Japan).
 Also, since it has been analyzed by many people for a long time, there is a great deal of analysis information and tools.
@@ -223,6 +223,8 @@ void m4aMPlayLFOSpeedSet(MusicPlayerArea *ma, u16 tb, u8 ls);
   * ipatix is one of the prominent MP2k analysts, and his github also has other MP2k tools such as m4a2s, midi2agb and wav2agb. They are useful for ROM hacking etc.
 * [Kermalis/VGMusicStudio: A program that lets you listen to the music from popular video game formats.](https://github.com/Kermalis/VGMusicStudio)
   * New music player and visualizer for GBA music format, written in C# (LGPLv3)
+* [ipatix/gba-hq-mixer: HQ mixer for GBA games which use the m4a/mp2k sound driver](https://github.com/ipatix/gba-hq-mixer)
+  * Provides additional relocatable code for higher quality mixing
 * [loveemu/saptapper: Automated GSF ripper](https://github.com/loveemu/saptapper) (A reimplementation of Caitsith2's saptapper)
   * Automated GSF ripping tool for MP2k
   * It can also be used to detect fundamental m4a functions
@@ -234,4 +236,5 @@ void m4aMPlayLFOSpeedSet(MusicPlayerArea *ma, u16 tb, u8 ls);
 * [pret/pokeruby: Disassembly of Pokémon Ruby/Sapphire](https://github.com/pret/pokeruby)
   * Actual example of music data
   * [m4a_internal.h](https://github.com/pret/pokeruby/blob/master/include/gba/m4a_internal.h) is a good representation of the internal data structure of MP2k
+  * As mentioned above, the Pokémon sound driver is a little more customized, but the differences are slight
 * [IDA FLIRT Signatures for GBA](https://1drv.ms/u/s!Alr6ACx5YY7_gjYggbVU-MQwJIlj?e=xR1rZD) (experimental)
