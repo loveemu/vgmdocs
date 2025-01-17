@@ -229,7 +229,7 @@ void m4aMPlayLFOSpeedSet(MusicPlayerArea *ma, u16 tb, u8 ls);
   * Automated GSF ripping tool for MP2k
   * It can also be used to detect fundamental m4a functions
   * Forked from: [GSF Ripping Tools - caitsith2.net](http://gsf.caitsith2.net/ripping.html)
-* [jpmac26/gba-mus-ripper: A fork of Bregalad's "GBA Mus Riper" program](https://github.com/jpmac26/gba-mus-ripper)
+* [Thysbelon/gba-mus-ripper: A fork of Bregalad's "GBA Mus Riper" program](https://github.com/Thysbelon/gba-mus-ripper)
   * Conversion tool that can export MP2k format to MIDI/SF2 format
   * sappy_detector.exe can be used to detect MP2k driver and view some basic information
   * Forked from: [Utilities - GBA Mus Riper - Romhacking.net](https://www.romhacking.net/utilities/881/)
