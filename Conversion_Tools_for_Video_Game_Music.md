@@ -783,13 +783,31 @@ PSFP is a portable sound format for Playstation Portable. You may find [further 
 <table>
   <tr>
     <th>Application</th>
+    <th>♥</th>
     <th>Developed by</th>
     <th>Platform</th>
     <th>Pricing</th>
     <th>Note</th>
   </tr>
   <tr>
-    <td><a href="https://www.plogue.com/products/chipsounds.html">chipsounds</a></td>
+    <td><a href="https://www.plogue.com/products/chipsynth-sfc.html">chipsynth SFC</a></td>
+    <td>♥</td>
+    <td><a href="https://www.plogue.com/">Plogue</a></td>
+    <td>Windows, macOS</td>
+    <td>$39.95</td>
+    <td>A bit accurate recreation of the Super Famicom (SNES) unique sound playback capabilities inside an easy to use and powerful virtual synthesizer. The plug-in has a built-in SPC player, which works very well with the instrument editor.</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.plogue.com/products/chipsynth-md.html">chipsynth MD</a></td>
+    <td>♥</td>
+    <td><a href="https://www.plogue.com/">Plogue</a></td>
+    <td>Windows, macOS</td>
+    <td>$49.95</td>
+    <td>A bit accurate recreation of the Mega Drive (Genesis) audio capabilities inside an easy to use and powerful virtual synthesizer. The plug-in has a built-in VGM player, which works very well with the instrument editor.</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.plogue.com/products/chipsounds.html">chipsounds (Legacy)</a></td>
+    <td></td>
     <td><a href="https://www.plogue.com/">Plogue</a></td>
     <td>Windows, macOS</td>
     <td>$95</td>
@@ -797,6 +815,7 @@ PSFP is a portable sound format for Playstation Portable. You may find [further 
   </tr>
   <tr>
     <td><a href="http://picopicose.com/software.html">C700</a></td>
+    <td></td>
     <td><a href="https://github.com/osoumen">osoumen</a></td>
     <td>Windows, macOS</td>
     <td>Free</td>
@@ -804,6 +823,7 @@ PSFP is a portable sound format for Playstation Portable. You may find [further 
   </tr>
   <tr>
     <td><a href="http://www.alyjameslab.com/alyjameslabfmdrive.html">FMDrive</a> and <a href="http://www.alyjameslab.com/alyjameslabsuperpsg.html">Super PSG</a></td>
+    <td></td>
     <td><a href="http://www.alyjameslab.com/">Aly James Lab</a></td>
     <td>Windows</td>
     <td>€10+</td>
