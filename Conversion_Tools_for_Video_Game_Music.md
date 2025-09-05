@@ -212,7 +212,7 @@ USF file can be turned back to ROM by hcs's usf2rom command-line tool. However I
     <th>Note</th>
   </tr>
   <tr>
-    <td><a href="https://github.com/jombo23/N64-Tools/tree/master/N64%20Soundbank%20Tool">N64 Soundbank Tool</a></td>
+    <td><a href="https://github.com/jombo23/N64-Tools/tree/master">N64 Soundbank Tool</a></td>
     <td>♥</td>
     <td><a href="https://twitter.com/subdrag">SubDrag</a></td>
     <td>Unlicense</td>
